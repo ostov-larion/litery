@@ -1,0 +1,127 @@
+* {
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e0e0e0;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 95%;
+    margin: 10px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+    font-size: xx-large;
+    color: #555;
+}
+
+div > div {
+    box-shadow: none;
+    flex-direction: row;
+    width: min-content;
+    height: min-content;
+}
+div > div[left] {
+    align-self: baseline;
+    box-shadow: none;
+    flex-direction: row;
+    width: min-content;
+    height: min-content;
+}
+
+button {
+    border: none;
+    border-radius: 15px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+    cursor: pointer;
+}
+
+button:active {
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+
+button[icon=next] {
+    content: url("../icons/next.svg");
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button[icon=prev] {
+    content: url("../icons/prev.svg");
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button[round] {
+    border-radius: 50%;
+    height: 42%;
+}
+
+input[type=checkbox] {
+    appearance: none;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    margin: 20px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+    cursor: pointer;
+}
+
+input[round] {
+    border-radius: 50%;
+    height: 42%;
+}
+
+input[type=checkbox][value]:after {
+    content: attr(value);
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+    color: #555;
+    font-size: medium;
+}
+
+input[type=checkbox][icon=play]:after {
+    content: url("../icons/play.svg");
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=checkbox][icon=play]:checked:after {
+    content: url("../icons/pause.svg");
+}
+
+input[type=checkbox][icon=menu]:after {
+    content: url("../icons/menu.svg");
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=checkbox]:checked {
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
